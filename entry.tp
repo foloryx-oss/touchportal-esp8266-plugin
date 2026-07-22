@@ -1,0 +1,36 @@
+entry.tp - Touch Portal Plugin Entry Point
+
+This is the entry point for the ESP8266 Light Controller Touch Portal Plugin.
+
+The actual plugin execution is handled by plugin.py as specified in manifest.json.
+
+Plugin Information:
+- Name: ESP8266 Light Controller
+- Version: 1.0.0
+- Category: ESP Camera Light
+- Description: Control WS2812B addressable LED strip on ESP8266 via HTTP API
+- Author: foloryx
+
+Supported Actions:
+1. Light ON - Turn on the light
+2. Light OFF - Turn off the light
+3. Set Brightness - Set brightness level (0-100%)
+
+Connectors:
+- Brightness Slider (0-100) - Real-time brightness adjustment
+
+States:
+- Light State - Current state of the light (On/Off)
+- Brightness - Current brightness level (0-100)
+
+Configuration Requirements:
+- ESP8266 IP Address
+- Port (default: 80)
+- Connection Timeout (default: 5 seconds)
+
+API Endpoints Used:
+- GET /api/on - Turn light on
+- GET /api/off - Turn light off
+- GET /api/brightness?value=0-255 - Set brightness
+
+For installation and setup instructions, see README.md
