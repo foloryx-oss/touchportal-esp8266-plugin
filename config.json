@@ -1,0 +1,7 @@
+{
+  "esp8266_ip": "192.168.1.100",
+  "esp8266_port": 80,
+  "connection_timeout": 5,
+  "brightness_level": 0,
+  "light_state": "Off"
+}
