@@ -1,0 +1,79 @@
+{
+  "sdk": 6,
+  "version": "1.0.0",
+  "name": "ESP8266 Light Controller",
+  "id": "com.foloryx.esp8266.light",
+  "plugin_start_cmd": "%TP_PLUGIN_FOLDER%ESP8266LightController\\plugin.py",
+  "plugin_start_cmd_linux": "$TP_PLUGIN_FOLDER/ESP8266LightController/plugin.py",
+  "plugin_start_cmd_mac": "$TP_PLUGIN_FOLDER/ESP8266LightController/plugin.py",
+  "documentation": "https://github.com/foloryx-oss/touchportal-esp8266-plugin",
+  "author": "foloryx",
+  "authToken": "",
+  "categories": [
+    {
+      "id": "esp_camera_light",
+      "name": "ESP Camera Light"
+    }
+  ],
+  "connectors": [
+    {
+      "id": "brightness_slider",
+      "name": "Brightness",
+      "category": "esp_camera_light",
+      "type": "slider",
+      "minValue": 0,
+      "maxValue": 100,
+      "default": 0,
+      "valueType": "number"
+    }
+  ],
+  "states": [
+    {
+      "id": "light_state",
+      "category": "esp_camera_light",
+      "type": "text",
+      "desc": "Light State",
+      "default": "Off"
+    },
+    {
+      "id": "brightness_value",
+      "category": "esp_camera_light",
+      "type": "text",
+      "desc": "Brightness",
+      "default": "0"
+    }
+  ],
+  "actions": [
+    {
+      "id": "light_on",
+      "category": "esp_camera_light",
+      "name": "Light ON",
+      "description": "Turn on the ESP8266 light",
+      "icon": "%TP_PLUGIN_FOLDER%ESP8266LightController\\assets\\light_on.png"
+    },
+    {
+      "id": "light_off",
+      "category": "esp_camera_light",
+      "name": "Light OFF",
+      "description": "Turn off the ESP8266 light",
+      "icon": "%TP_PLUGIN_FOLDER%ESP8266LightController\\assets\\light_off.png"
+    },
+    {
+      "id": "set_brightness",
+      "category": "esp_camera_light",
+      "name": "Set Brightness",
+      "description": "Set brightness level (0-100%)",
+      "format": "Set brightness to {1}%",
+      "hasHoldFunctionality": false,
+      "data": [
+        {
+          "id": "brightness_level",
+          "label": "Brightness",
+          "type": "text",
+          "regex": "^(100|[0-9]{1,2})$"
+        }
+      ],
+      "icon": "%TP_PLUGIN_FOLDER%ESP8266LightController\\assets\\brightness.png"
+    }
+  ]
+}
